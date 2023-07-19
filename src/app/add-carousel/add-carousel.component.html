@@ -1,0 +1,29 @@
+<body>
+    <br>
+    <button class="btn btn-primary mb-3" (click)="insertarCarousel()">Insertar Vehiculo</button>
+    <br>
+    <div class="table-container">
+  
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Acciones</th> <!-- Nueva columna para los botones -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of carroselData">
+              <td><img [src]="item.Url"></td>
+              <td>{{ item.Nombre }}</td>
+              <td>
+                <button class="btn btn-sm btn-primary me-2" (click)="editarCarousel(item.carroselID)">Editar</button>
+                <button class="btn btn-sm btn-danger" (click)="eliminarCarousel(item.carroselID)">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+    </div>
+
+</body>

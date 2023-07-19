@@ -1,0 +1,117 @@
+<body>
+    <h1>Comparar Vehiculos</h1>
+    <div class="row">
+        <div class="col-md-6">
+          <select class="form-select" aria-label="Select vehículo 1" [(ngModel)]="vehiculo1ID">
+            <option selected>Seleccione un vehículo 1</option>
+            <option *ngFor="let vehiculo of vehiculos" [value]="vehiculo.VehiculoID">
+              {{ vehiculo.VehiculoID }} - {{ vehiculo.Marca }} - {{ vehiculo.Modelo }}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <select class="form-select" aria-label="Select vehículo 2" [(ngModel)]="vehiculo2ID">
+            <option selected>Seleccione un vehículo 2</option>
+            <option *ngFor="let vehiculo of vehiculos" [value]="vehiculo.VehiculoID">
+              {{ vehiculo.VehiculoID }} - {{ vehiculo.Marca }} - {{ vehiculo.Modelo }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12">
+          <button class="btn btn-primary" (click)="compararVehiculos()">Comparar</button>
+        </div>
+      </div>
+
+      <div *ngIf="mostrarComparacion">
+        <div class="row" *ngIf="valor1 >= valor2; else vehiculo2Seguro">
+          <div class="col-md-12">
+            <h5>El vehículo 1 es más seguro que el vehículo 2</h5>
+          </div>
+        </div>
+      </div>
+      
+    
+      <ng-template #vehiculo2Seguro>
+        <div class="row">
+          <div class="col-md-12">
+            <h5>El vehículo 2 es más seguro que el vehículo 1</h5>
+          </div>
+        </div>
+      </ng-template>
+
+      <div class="row" *ngIf="mostrarComparacion">
+        <div class="col-md-6">
+            <div class="table-wrapper">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                        <td><img [src]="vehiculo1?.UrlImage"></td>
+                    </tr>
+                    <tr>
+                      <th>Marca</th>
+                      <td>{{ vehiculo1?.Marca }}</td>
+                    </tr>
+                    <tr>
+                        <th>Modelo</th>
+                        <td>{{ vehiculo1?.Modelo }}</td>
+                    </tr>
+                    <tr>
+                        <th>Version</th>
+                        <td>{{ vehiculo1?.Version }}</td>
+                    </tr>
+                    <tr>
+                        <th>Año</th>
+                        <td>{{ vehiculo1?.Anio }}</td>
+                    </tr>
+                    <tr>
+                        <th>Categoría</th>
+                        <td>{{ vehiculo1?.Categoria }}</td>
+                    </tr>
+                    <tr>
+                      <th>Valoracion</th>
+                      <td>{{ valor1.toFixed(2) }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+        <div class="col-md-6">
+            <div class="table-wrapper">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                        <td><img [src]="vehiculo2?.UrlImage"></td>
+                    </tr>
+                    <tr>
+                      <td>{{ vehiculo2?.Marca }}</td>
+                      <th>Marca</th>
+                    </tr>
+                    <tr>                        
+                        <td>{{ vehiculo2?.Modelo }}</td>
+                        <th>Modelo</th>
+                    </tr>
+                    <tr>
+                        <td>{{ vehiculo2?.Version }}</td>
+                        <th>Version</th>
+                    </tr>
+                    <tr>
+                        <td>{{ vehiculo2?.Anio }}</td>
+                        <th>Año</th>
+                    </tr>
+                    <tr>
+                        <td>{{ vehiculo2?.Categoria }}</td>
+                        <th>Categoría</th>
+                    </tr>
+                    <tr>
+                      <td>{{ valor2.toFixed(2) }}</td>
+                      <th>Valoracion</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+      </div>
+
+</body>

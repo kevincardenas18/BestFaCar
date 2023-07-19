@@ -1,0 +1,28 @@
+body {
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.col-md-12 {
+    display: flex;
+    justify-content: center;
+}
+  
+.btn-primary {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 300px;
+}
+
+.table td img {
+    width: auto;
+    height: 20rem;
+  }
+
+.col-md-12{
+    padding-top: 1.5rem;
+}
+
+  

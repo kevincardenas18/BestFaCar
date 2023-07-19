@@ -1,0 +1,38 @@
+<body>
+    <br>
+    <button class="btn btn-primary mb-3" (click)="insertarVehiculo()">Insertar Vehiculo</button>
+    <br>
+    <div class="table-container">
+  
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Año</th>
+              <th>Categoria</th>
+              <th>Acciones</th> <!-- Nueva columna para los botones -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let vehiculo of vehiculos">
+              <td><img [src]="vehiculo.UrlImage"></td>
+              <td>{{ vehiculo.Marca }}</td>
+              <td>{{ vehiculo.Modelo }}</td>
+              <td>{{ vehiculo.Anio}}</td>
+              <td>{{ vehiculo.Categoria }}</td>
+              <td>
+                <button class="btn btn-sm btn-primary me-2" (click)="editarVehiculo(vehiculo.VehiculoID)">Editar</button>
+                <button class="btn btn-sm btn-danger" (click)="eliminarVehiculo(vehiculo.VehiculoID)">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+    
+

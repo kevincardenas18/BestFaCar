@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+.navbar {
+    background-color: #000000; /* Color de fondo */
+    padding: 0px; /* Espacio interno */
+  }
+  
+  .navbar-brand img {
+    width: auto; /* Ancho de la imagen del logo */
+    height: 60px; /* Altura de la imagen del logo */
+    vertical-align: middle; /* Alineación vertical */
+  }
+
+  .navbar-toggler {
+    /* Estilos personalizados para el botón */
+    background-color: #ffffff;
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+
+  }
+  
+  .navbar-toggler-icon {
+    /* Estilos para el icono dentro del botón */
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+  }
+  
+  /* Estilos adicionales para el botón cuando está desplegado */
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    /* Estilos para el icono cuando el menú está desplegado */
+    transform: rotate(90deg);
+  }
+  
+  .navbar-nav .nav-link {
+    color: #ffffff; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #47a0ff; /* Color del texto al pasar el ratón */
+  }
+
+  .navbar-nav .nav-link:focus {
+    color: #007bff; /* Color del texto al enfocar */
+  }
+  
+  .navbar-nav .active .nav-link {
+    color: #007bff; /* Color del texto del elemento activo */
+  }
+  
+  .dropdown-menu {
+    background-color: #181818; /* Color de fondo del menú desplegable */
+    border: none; /* Eliminar borde */
+  }
+  
+  .dropdown-item {
+    color: #ffffff; /* Color del texto del menú desplegable */
+  }
+  
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    color: #007bff; /* Color del texto al pasar el ratón o enfocar */
+    background-color: #2a2a2a; /* Color de fondo al pasar el ratón o enfocar */
+  }
+  
+  .form-control {
+    width: 200px; /* Ancho del campo de búsqueda */
+  }
+  
+  .btn-outline-success {
+    color: #28a745; /* Color del texto del botón */
+    border-color: #28a745; /* Color del borde del botón */
+  }
+  
+  .btn-outline-success:hover,
+  .btn-outline-success:focus {
+    color: #fff; /* Color del texto al pasar el ratón o enfocar */
+    background-color: #28a745; /* Color de fondo al pasar el ratón o enfocar */
+    border-color: #28a745; /* Color del borde al pasar el ratón o enfocar */
+  }
+  
+
+footer {
+    background-color: black;
+    padding: 20px 0;
+    color: #fff;
+}
+
+    footer img {
+        height: 50px;
+    }
+
+    footer p {
+        margin-bottom: 0;
+    }

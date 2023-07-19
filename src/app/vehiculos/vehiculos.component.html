@@ -1,0 +1,20 @@
+<body>
+
+      <div class="row">
+        <div class="col-md-4" *ngFor="let vehiculo of vehiculos">
+            <div class="card" style="width: 18rem;">
+                <img [src]="vehiculo.UrlImage" class="card-img-top" alt="{{ vehiculo.NombreImagen }}">
+            <div class="card-body">
+              <h5 class="card-title"><strong>{{ vehiculo.Marca }} {{ vehiculo.Modelo }}</strong></h5>
+              <p class="card-text"><strong>Modelo:</strong> {{ vehiculo.Version }}</p>
+              <p class="card-text"><strong>Año:</strong> {{ vehiculo.Anio }}</p>
+              <p class="card-text"><strong>Categoría:</strong> {{ vehiculo.Categoria }}</p>
+              <p class="card-text" *ngIf="caracteristicas.length > 0">
+                <strong>Descripción:</strong> {{ getCaracteristicaDescripcion(vehiculo.VehiculoID) }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</body>
